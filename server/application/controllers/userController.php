@@ -13,7 +13,7 @@ class userController extends CI_Controller{
 	     * @apiParam {string} phone Phone
 	     * @apiParam {string} password Password
 	     * @apiParam {number} active Active
-	     * @apiParam {number} role Role
+	     * @apiParam {string} role Role
 	     *
 	     * @apiSuccess {string} status Status of the request.
 	     * @apiSuccess {string} message Message corresponding to request.

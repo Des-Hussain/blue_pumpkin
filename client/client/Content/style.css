@@ -1,0 +1,15 @@
+﻿body{
+    overflow-y: hidden;
+}
+
+/*header nav bar css*/
+.bP_Nav {
+    background-color: rgba(0, 123, 255, 0.25);
+    box-shadow: 0px 3px 6px #0641ad;
+    -webkit-box-shadow: 0px 3px 6px #0641ad;
+}
+
+.logo{
+    width: auto;
+    height: 50px;
+}
