@@ -1,1 +1,110 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@font-face{ /* for IE */
+	font-family:Montserrat;
+	src:url('assets/fonts/Montserrat/Montserrat-Regular.ttf');
+}
+@font-face {
+	font-family: "Montserrat";
+	src: url("assets/fonts/Montserrat/Montserrat-Regular.eot"); 
+	src: url("assets/fonts/Montserrat/Montserrat-Regular.eot?#iefix") format("embedded-opentype"),
+	url("assets/fonts/Montserrat/Montserrat-Regular.woff2") format("woff2");
+	font-weight: normal;
+	font-style: normal;
+}
+*{
+	font-family: Montserrat;
+}
+mat-form-field.mat-form-field{
+	width: 100%;
+}
+.modal-backdrop{z-index: 998;}
+a, a:hover, a:active{cursor: pointer;text-decoration: none;}
+a:not([href]):not([tabindex]){color: inherit;}
+.transition25{
+	transition: all 0.25s ease;
+	-webkit-transition: all 0.25s ease;
+	-moz-transition: all 0.25s ease;
+	-ms-transition: all 0.25s ease;
+	-o-transition: all 0.25s ease;
+}
+/*SIDE BAR STYLING STARTS*/
+.bpSideBar{
+	position: absolute;
+	min-height: 100vh;
+	min-width: 260px;
+	background-color: rgb(255, 255, 255);
+	-webkit-box-shadow: 0 0 15px 0 rgba(0,0,0,.05);
+	box-shadow: 0 0 15px 0 rgba(0,0,0,.05);
+}
+.sideBarHead{
+
+}
+.logoCon {
+	padding: 0.94em 0.94em 1.5em;
+	border-bottom: 10px solid #ffffff91;
+}
+.logoCon img{
+	height: 45px;
+}
+.sideHeader {
+	font-size: 1.2em;
+	display: inline-block;
+	font-weight: 600;
+	color: #4c75c2;
+}
+.sideBarToggler{
+	float: right;
+	margin-top: .4em;
+	font-size: 1.2em;
+}
+a.sideBarToggler{
+	color: #4c75c2 !important;
+}
+.sideBarListCon {
+	overflow-x: hidden;
+}
+.bpSideBar_Item {
+	padding: 0 0.938em;
+	position: relative;
+	left: 0px;
+}
+.bpSideBar_Item a.bpSideBar_ItemNav>*{
+	position: relative;
+	left: 0px;
+}
+.bpSideBar_Item:hover a.bpSideBar_ItemNav>*{
+	left: 5px;
+}
+.bpSideBar_ItemNav{
+	background: rgba(0,0,0,0);
+	padding: 0.75em 0.94em;
+	display: block;
+	border-radius: 4px;
+	margin-bottom: 0.94em;
+}
+.bpSideBar_ItemNav.active{
+	background: linear-gradient(90deg, rgb(76, 117, 194), rgba(78, 119, 196, 0.65));
+	background: -webkit-linear-gradient(90deg, rgb(76, 117, 194), rgba(78, 119, 196, 0.65));
+	background: -moz-linear-gradient(90deg, rgb(76, 117, 194), rgba(78, 119, 196, 0.65));
+	background: -ms-linear-gradient(90deg, rgb(76, 117, 194), rgba(78, 119, 196, 0.65));
+	background: -o-linear-gradient(90deg, rgb(76, 117, 194), rgba(78, 119, 196, 0.65));
+	box-shadow: 0 0 8px #4c75c2;
+	-webkit-box-shadow: 0 0 8px #4c75c2;
+}
+.bpSideBar_ItemNav.active span{
+	display: inline-block;
+}
+.bpSideBar_ItemNav.active span{
+	color: #fff;
+}
+.bpSideBar_ItemNav span.fa-fw{
+	margin-right: 0.94em;
+}
+/*COMPONENTS DESIGNING*/
+.bpBody{
+	background-color: #f7f7f7;
+	min-height: 100vh;
+}
+.mainSec{
+	margin-left: 260px;
+}
