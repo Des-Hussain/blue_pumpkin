@@ -1,3 +1,51 @@
-<p>
-  navbar works!
-</p>
+<div class="dashBoardNav">
+	<header class="bpNavHeader d-flex">
+		<div class="w-50 my-auto">
+			<a class="navSideToggler mr-2"><i class="fa fa-bars"></i></a>
+			<h4 class="d-inline-block m-0"><i class="fas fa-rainbow"></i> Dashboard</h4>
+		</div>
+		<div class="w-50 d-flex">
+			<div class="navNotiCon ml-auto">
+				<button mat-icon-button color="primary"  matBadge="8" matBadgePosition="before" matBadgeColor="accent" (click)="toggleNotificaitons()">
+					<i class="fas fa-bell" style="font-size: 1.5em;"></i>
+				</button>
+				<div class="notificationCon transition25" [ngClass]="{'open': notificationToggler}">
+					<div class="notiHeader text-center">
+						<h4 class="mb-0">5 New</h4>
+						<p class="mb-0">Notifications</p>
+					</div>
+					<div class="notiCon">
+						<div class="noti">
+							<div class="icon text-info">
+								<i class="far fa-calendar"></i>
+							</div>
+							<div class="notiData">
+								<p class="notiTitle text-info">Birthday Of Jai</p><span class="notiTime">10 hrs ago</span>
+								<p class="notiTxt">wish him a birthday to make his day amazing.</p>
+							</div>
+						</div>
+						<div class="notiFooter text-center">
+							<a class="font-weight-bold">Mark all as read</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="userNavDataCon">
+				<div class="userNavtextCon">
+					<h6>Lee Jong Suk</h6>
+					<span><i class="fas fa-circle text-success"></i> Online</span>
+				</div>
+				<div class="userNavImgCon" (click)="navDropToggle()">
+					<img src="assets/img/avatar.jpg">
+					<div class="navdropDown transition25" [ngClass]="{'open': navDropToggler}">
+						<ul>
+							<li><a>Profile</a></li>
+							<hr class="NavDrpsep">
+							<li><a class="mb-0" [routerLink]="['/login']"><i class="fas fa-sign-out-alt"></i> log out</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+</div>

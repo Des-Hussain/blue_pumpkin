@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from './../api.service';
+import { CommonService } from './../common.service';
+import { NotificationsService } from 'angular2-notifications';
+import { Router } from '@angular/router'
 
 @Component({
 	selector: 'app-header',
@@ -7,7 +11,7 @@ import { Component, OnInit } from '@angular/core';
 	})
 export class HeaderComponent implements OnInit {
 
-	constructor() { }
+	constructor(public apiService:ApiService, public commonService:CommonService, private notificationsService:NotificationsService, public router:Router) { }
 
 	public position:String = 'right';
 	toggleSideBar:Boolean = false;

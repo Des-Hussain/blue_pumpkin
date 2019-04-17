@@ -19,7 +19,7 @@ mat-form-field.mat-form-field{
 }
 .modal-backdrop{z-index: 998;}
 a, a:hover, a:active{cursor: pointer;text-decoration: none;}
-a:not([href]):not([tabindex]){color: inherit;}
+a:not([href]):not([tabindex]){color: inherit;cursor: pointer;}
 .transition25{
 	transition: all 0.25s ease;
 	-webkit-transition: all 0.25s ease;
@@ -29,12 +29,16 @@ a:not([href]):not([tabindex]){color: inherit;}
 }
 /*SIDE BAR STYLING STARTS*/
 .bpSideBar{
-	position: absolute;
+	position: fixed;
 	min-height: 100vh;
 	min-width: 260px;
 	background-color: rgb(255, 255, 255);
 	-webkit-box-shadow: 0 0 15px 0 rgba(0,0,0,.05);
 	box-shadow: 0 0 15px 0 rgba(0,0,0,.05);
+	color: #444;
+}
+a.bpSideBar_ItemNav {
+    color: #444;
 }
 .sideBarHead{
 	width: 260px;
@@ -118,9 +122,9 @@ a.sideBarToggler{
 	display: none;
 }
 span.turncate {
-    word-break: keep-all;
-    width: 150px;
-    min-width: 150px;
+	word-break: keep-all;
+	width: 150px;
+	min-width: 150px;
 }
 /*HOVER EFFECT*/
 .bpSideBar.miniBar:hover {
@@ -136,6 +140,226 @@ span.turncate {
 .bpSideBar.miniBar:hover .sideBarListCon span.turncate.transition25{
 	display: inline-block;
 }
+
+/*NAVBAR DESIGN*/
+.dashBoardNav {
+	position: sticky;
+	width: inherit;
+	top: 30px;
+	display: block;
+}
+.bpNavHeader {
+	background: rgb(255, 255, 255);
+	padding: .8rem 1rem;
+	border-radius: .5rem;
+	transition: all .5s;
+	-webkit-box-shadow: 0 4px 20px 0 rgba(0,0,0,.05);
+	box-shadow: 0 4px 20px 0 rgba(0,0,0,.05);
+	-webkit-transition: all .5s;
+	top: 0;
+	z-index: 10;
+	display: block;
+	color: #444;
+}
+.navSideToggler{
+	font-size: 1.2em;
+	display: none;
+	cursor: pointer;
+}
+.userNavDataCon {
+	margin-left: 1em;
+	display: flex;
+	display: -webkit-flex;
+}
+.userNavtextCon{
+	margin: auto;
+	text-align: right;
+}
+.userNavtextCon h6{
+	font-size: 0.7em;
+	margin-bottom: 0;
+	line-height: 0.2;
+	margin-top: 0.9em;
+}
+.userNavtextCon span{
+	font-size: 0.5em;
+}
+.userNavImgCon{
+	padding: 0 0.5em;
+	cursor: pointer;
+	position: relative;
+}
+.userNavImgCon img{
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	webkit-box-shadow: 0 4px 8px 0 rgba(0,0,0,.12),0 2px 4px 0 rgba(0,0,0,.08);
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,.12),0 2px 4px 0 rgba(0,0,0,.08);
+}
+.navdropDown{
+	border-radius: 5px;
+	padding: 0.5em 0.75px;
+	border: 1px solid rgba(0,0,0,0.1);
+	z-index: -50;
+	opacity: 0;
+	transform: translateY(15px);
+	-webkit-transform: translateY(15px);
+	-moz-transform: translateY(15px);
+	-ms-transform: translateY(15px);
+	-o-transform: translateY(15px);
+	position: absolute;
+	width: 125px;
+	left: -75px;
+	top: 45px;
+	background: #fff;
+	-webkit-box-shadow: 0 4px 20px 0 rgba(0,0,0,.05);
+	box-shadow: 0 4px 20px 0 rgba(0,0,0,.05);
+}
+.navdropDown.open{
+	opacity: 1;
+	transform: translateY(0px);
+	-webkit-transform: translateY(0px);
+	-moz-transform: translateY(0px);
+	-ms-transform: translateY(0px);
+	-o-transform: translateY(0px);
+	z-index: 49;
+}
+.navdropDown::before{
+	content: '';
+	display: block;
+	top: -2px;
+	position: absolute;
+	right: 10px;
+	width: 10px;
+	height: 10px;
+	display: block;
+	background: #fff;
+	-webkit-transform: rotate(45deg) translate(-7px);
+	transform: rotate(45deg) translate(-7px);
+	border-top: 1px solid rgba(0,0,0,.1);
+	border-left: 1px solid rgba(0,0,0,.1);
+	z-index: 10;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.navdropDown ul{
+	list-style: none;
+	padding: 0 0.3em;
+	margin: 0;
+}
+.navdropDown li a{
+	padding: 0.5em 0.5em;
+	display: block;
+	margin-bottom: 0.4em;
+}
+.navdropDown li a:hover{
+	background: #5078c3;
+	color: #fff !important;
+}
+.NavDrpsep{
+	margin: 0.2em 0;
+	height: 1px solid #b1b1b1;
+}
+.navNotiCon{
+	position: relative;
+}
+.navNotiCon button:focus{
+	outline: none;
+}
+.notificationCon{
+	border-radius: 5px;
+	padding: 0;
+	border: 1px solid rgba(0,0,0,0.1);
+	z-index: -50;
+	opacity: 0;
+	transform: translateY(15px);
+	-webkit-transform: translateY(15px);
+	-moz-transform: translateY(15px);
+	-ms-transform: translateY(15px);
+	-o-transform: translateY(15px);
+	position: absolute;
+	width: 300px;
+	left: -259px;
+	top: 40px;
+	background: #fff;
+	-webkit-box-shadow: 0 4px 20px 0 rgba(0,0,0,.05);
+	box-shadow: 0 4px 20px 0 rgba(0,0,0,.05);
+}
+.notificationCon.open{
+	opacity: 1;
+	transform: translateY(0px);
+	-webkit-transform: translateY(0px);
+	-moz-transform: translateY(0px);
+	-ms-transform: translateY(0px);
+	-o-transform: translateY(0px);
+	z-index: 49;
+}
+.notificationCon::before{
+	content: '';
+	display: block;
+	top: 0px;
+	position: absolute;
+	right: 10px;
+	width: 10px;
+	height: 10px;
+	display: block;
+	background: #557cc5;
+	-webkit-transform: rotate(45deg) translate(-7px);
+	transform: rotate(45deg) translate(-7px);
+	border-top: 1px solid rgba(0,0,0,.1);
+	border-left: 1px solid rgba(0,0,0,.1);
+	z-index: 10;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.notiHeader{
+	background-color: #557cc5;
+	color: #fff;
+	padding: 0.75em 0.75px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+.noti {
+	display: flex;
+	border-bottom: 1px solid #dcdcdc;
+	padding: .75em;
+}
+.notiCon {
+	max-height: 300px;
+	overflow: auto;
+}
+.noti:hover{
+	background: #fbfbfb;
+}
+.icon {
+	padding: 0.2em;
+/*	color: #17a2b8;*/
+}
+p.notiTitle {
+	display: inline-block;
+	margin-bottom: 0;
+	margin-top: 0.25em;
+	font-size: 0.9em;
+	padding: 0 0 0 0.5em;
+	font-weight: 600;
+/*	color: #17a2b8;*/
+}
+span.notiTime {
+	font-size: 0.7em;
+	float: right;
+	margin-top: 0.25em;
+	color: #b1b1b1;
+}
+p.notiTxt {
+	padding-left: 0.5em;
+	font-size: 0.8em;
+	color: #696565;
+	margin-bottom: 0.5em;
+}
+.notiFooter {
+    color: #557cc5;
+    padding: .3em;
+}
 /*COMPONENTS DESIGNING*/
 .bpBody{
 	background-color: #f7f7f7;
@@ -144,4 +368,8 @@ span.turncate {
 .mainSec{
 	padding: 1.5em 1.5em;
 	margin-left: 260px;
+	position: relative;
+}
+.compBody{
+	margin-top: 1.5rem;
 }

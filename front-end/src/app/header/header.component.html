@@ -11,41 +11,47 @@
 	</div>
 	<div class="sideBarListCon">
 		<div class="bpSideBar_Item">
-			<a class="bpSideBar_ItemNav active">
+			<a class="bpSideBar_ItemNav" [routerLink]="['/admin-dash']" [ngClass]="{'active':router.url == '/admin-dash'}">
 				<span class="fas fa-rainbow fa-fw transition25" matTooltip="Dashboard" [matTooltipPosition]="position"></span>
 				<span class="turncate  transition25">Dashboard</span>
 			</a>
 		</div>
 		<div class="bpSideBar_Item">
-			<a class="bpSideBar_ItemNav">
+			<a class="bpSideBar_ItemNav" [routerLink]="['/viewevents']" [ngClass]="{'active':router.url == '/viewevents'}">
 				<span class="fas fa-pizza-slice fa-fw transition25" matTooltip="Events" [matTooltipPosition]="position"></span>
 				<span class="turncate transition25">View Events</span>
 			</a>
 		</div>
 		<div class="bpSideBar_Item">
-			<a class="bpSideBar_ItemNav">
+			<a class="bpSideBar_ItemNav" [routerLink]="['/addEvent']" [ngClass]="{'active':router.url == '/addEvent'}">
 				<span class="fas fa-folder-plus fa-fw transition25" matTooltip="Events" [matTooltipPosition]="position"></span>
 				<span class="turncate transition25">Add Events</span>
 			</a>
 		</div>
 		<div class="bpSideBar_Item">
-			<a class="bpSideBar_ItemNav">
+			<a class="bpSideBar_ItemNav" [routerLink]="['/event-applicaitons']" [ngClass]="{'active':router.url == '/event-applicaitons'}">
+				<span class="fas fa-folder-plus fa-fw transition25" matTooltip="Events" [matTooltipPosition]="position"></span>
+				<span class="turncate transition25">Event Applicaitons</span>
+			</a>
+		</div>
+		<div class="bpSideBar_Item">
+			<a class="bpSideBar_ItemNav" [routerLink]="['/addEmp']" [ngClass]="{'active':router.url == '/addEmp'}">
 				<span class="fas fa-user-secret fa-fw transition25" matTooltip="Events" [matTooltipPosition]="position"></span>
 				<span class="turncate transition25">View Employees</span>
 			</a>
 		</div>
 		<div class="bpSideBar_Item">
-			<a class="bpSideBar_ItemNav">
+			<a class="bpSideBar_ItemNav" [routerLink]="['/viewEmp']" [ngClass]="{'active':router.url == '/viewEmp'}">
 				<span class="fas fa-user-plus fa-fw transition25" matTooltip="Events" [matTooltipPosition]="position"></span>
 				<span class="turncate transition25">Add Employees</span>
 			</a>
 		</div>
-		<div class="bpSideBar_Item">
+		<!-- <div class="bpSideBar_Item">
 			<a class="bpSideBar_ItemNav">
 				<span class="fas fa-user-cog fa-fw transition25" matTooltip="Events" [matTooltipPosition]="position"></span>
 				<span class="turncate transition25">Profile</span>
 			</a>
-		</div>
+		</div> -->
 		<!-- Admin Menus Ends -->
 	</div>
 </div>

@@ -8,6 +8,7 @@ import { AdminDashComponent } from './admin-dash/admin-dash.component';
 import { EventComponent } from './event/event.component';
 import { AddEmpComponent } from './add-emp/add-emp.component';
 import { ViewEmpComponent } from './view-emp/view-emp.component';
+import { EventAppsComponent } from './event-apps/event-apps.component';
 import { AddEventComponent } from './add-event/add-event.component';
 import { ProfileComponent } from './profile/profile.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
@@ -26,7 +27,8 @@ import { LandingComponent } from './landing/landing.component';
   	{ path: 'viewevents', component: EventComponent},
   	{ path: 'addEvent', component: AddEventComponent},
   	{ path: 'addEmp', component: AddEmpComponent},
-  	{ path: 'viewEmp', component: ViewEmpComponent},
+    { path: 'viewEmp', component: ViewEmpComponent},
+  	{ path: 'event-applicaitons', component: EventAppsComponent},
     { path: 'profile', component: ProfileComponent},
     // Employee Routes
     { path: 'userProfile', component: UserProfileComponent},
