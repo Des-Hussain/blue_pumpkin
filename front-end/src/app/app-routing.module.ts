@@ -3,7 +3,6 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [];
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
 import { LoginComponent } from './login/login.component';
 import { AdminDashComponent } from './admin-dash/admin-dash.component';
 import { EventComponent } from './event/event.component';

@@ -34,6 +34,7 @@ import { HttpService } from './app.service';
 import { LoginComponent } from './login/login.component';
 import { LandingComponent } from './landing/landing.component';
 import { UserdashboardComponent } from './userdashboard/userdashboard.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
 	declarations: [
@@ -54,7 +55,8 @@ import { UserdashboardComponent } from './userdashboard/userdashboard.component'
 	UserEventsComponent,
 	LoginComponent,
 	LandingComponent,
-	UserdashboardComponent
+	UserdashboardComponent,
+	NavbarComponent
 	],
 	imports: [
 	HttpClientModule,

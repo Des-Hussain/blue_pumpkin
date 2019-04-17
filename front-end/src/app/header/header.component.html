@@ -1,11 +1,11 @@
-<div class="bpSideBar">
+<div class="bpSideBar transition25" [ngClass]="{'miniBar':toggleSideBar}">
 	<div class="sideBarHead">
 		<div class="logoCon">
 			<img src="assets/img/logo_icon.png" alt="Blue Pumpkin">
 			<h3 class="sideHeader">Blue Pumpkin</h3>
-			<a class="sideBarToggler">
-				<!-- <i class="far fa-circle"></i> -->
-				<i class="far fa-dot-circle"></i>
+			<a class="sideBarToggler" (click)="toggleMiniSideBar()">
+				<i class="far fa-circle" *ngIf="toggleSideBar"></i>
+				<i class="far fa-dot-circle" *ngIf="!toggleSideBar"></i>
 			</a>
 		</div>
 	</div>

@@ -37,7 +37,7 @@ a:not([href]):not([tabindex]){color: inherit;}
 	box-shadow: 0 0 15px 0 rgba(0,0,0,.05);
 }
 .sideBarHead{
-
+	width: 260px;
 }
 .logoCon {
 	padding: 0.94em 0.94em 1.5em;
@@ -70,6 +70,7 @@ a.sideBarToggler{
 }
 .bpSideBar_Item a.bpSideBar_ItemNav>*{
 	position: relative;
+	line-height: 1.5;
 	left: 0px;
 }
 .bpSideBar_Item:hover a.bpSideBar_ItemNav>*{
@@ -81,6 +82,8 @@ a.sideBarToggler{
 	display: block;
 	border-radius: 4px;
 	margin-bottom: 0.94em;
+	display: flex;
+	display: -webkit-flex;
 }
 .bpSideBar_ItemNav.active{
 	background: linear-gradient(90deg, rgb(76, 117, 194), rgba(78, 119, 196, 0.65));
@@ -100,11 +103,45 @@ a.sideBarToggler{
 .bpSideBar_ItemNav span.fa-fw{
 	margin-right: 0.94em;
 }
+.bpSideBar.miniBar {
+	min-width: 80px;
+	width: 80px;
+	overflow-x: hidden;
+}
+.bpSideBar.miniBar .logoCon .sideHeader {
+	display: none;
+}
+.bpSideBar.miniBar .logoCon .sideBarToggler{
+	display: none;
+}
+.bpSideBar.miniBar .sideBarListCon span.turncate.transition25{
+	display: none;
+}
+span.turncate {
+    word-break: keep-all;
+    width: 150px;
+    min-width: 150px;
+}
+/*HOVER EFFECT*/
+.bpSideBar.miniBar:hover {
+	min-width: 260px;
+	width: 260px;
+}
+.bpSideBar.miniBar:hover .logoCon .sideHeader {
+	display: inline-block;
+}
+.bpSideBar.miniBar:hover .logoCon .sideBarToggler{
+	display: inline-block;
+}
+.bpSideBar.miniBar:hover .sideBarListCon span.turncate.transition25{
+	display: inline-block;
+}
 /*COMPONENTS DESIGNING*/
 .bpBody{
 	background-color: #f7f7f7;
 	min-height: 100vh;
 }
 .mainSec{
+	padding: 1.5em 1.5em;
 	margin-left: 260px;
 }

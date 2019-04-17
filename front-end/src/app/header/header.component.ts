@@ -10,8 +10,11 @@ export class HeaderComponent implements OnInit {
 	constructor() { }
 
 	public position:String = 'right';
+	toggleSideBar:Boolean = false;
 
 	ngOnInit() {
 	}
-
+	toggleMiniSideBar(){
+		this.toggleSideBar = !this.toggleSideBar;
+	}
 }
