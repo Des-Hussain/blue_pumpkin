@@ -25,13 +25,3 @@
 .loginhead p{
 	color: #adadad;
 }
-button{
-	background: linear-gradient(90deg, rgb(76, 117, 194), rgba(78, 119, 196, 0.65));
-	background: -webkit-linear-gradient(90deg, rgb(76, 117, 194), rgba(78, 119, 196, 0.65));
-	background: -moz-linear-gradient(90deg, rgb(76, 117, 194), rgba(78, 119, 196, 0.65));
-	background: -ms-linear-gradient(90deg, rgb(76, 117, 194), rgba(78, 119, 196, 0.65));
-	background: -o-linear-gradient(90deg, rgb(76, 117, 194), rgba(78, 119, 196, 0.65));
-	box-shadow: 0 0 8px #4c75c2;
-	-webkit-box-shadow: 0 0 8px #4c75c2;
-	color: #fff;
-}

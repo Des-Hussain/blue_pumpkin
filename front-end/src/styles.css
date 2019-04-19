@@ -17,6 +17,9 @@
 mat-form-field.mat-form-field{
 	width: 100%;
 }
+table{
+	width: 100%;
+}
 .modal-backdrop{z-index: 998;}
 a, a:hover, a:active{cursor: pointer;text-decoration: none;}
 a:not([href]):not([tabindex]){color: inherit;cursor: pointer;}
@@ -32,6 +35,7 @@ a:not([href]):not([tabindex]){color: inherit;cursor: pointer;}
 	position: fixed;
 	min-height: 100vh;
 	min-width: 260px;
+	z-index: 200;
 	background-color: rgb(255, 255, 255);
 	-webkit-box-shadow: 0 0 15px 0 rgba(0,0,0,.05);
 	box-shadow: 0 0 15px 0 rgba(0,0,0,.05);
@@ -143,7 +147,6 @@ span.turncate {
 
 /*NAVBAR DESIGN*/
 .dashBoardNav {
-	position: sticky;
 	width: inherit;
 	top: 30px;
 	display: block;
@@ -157,7 +160,6 @@ span.turncate {
 	box-shadow: 0 4px 20px 0 rgba(0,0,0,.05);
 	-webkit-transition: all .5s;
 	top: 0;
-	z-index: 10;
 	display: block;
 	color: #444;
 }
@@ -361,6 +363,16 @@ p.notiTxt {
     padding: .3em;
 }
 /*COMPONENTS DESIGNING*/
+.themeBtn{
+	background: linear-gradient(90deg, rgb(76, 117, 194), rgba(78, 119, 196, 0.65));
+	background: -webkit-linear-gradient(90deg, rgb(76, 117, 194), rgba(78, 119, 196, 0.65));
+	background: -moz-linear-gradient(90deg, rgb(76, 117, 194), rgba(78, 119, 196, 0.65));
+	background: -ms-linear-gradient(90deg, rgb(76, 117, 194), rgba(78, 119, 196, 0.65));
+	background: -o-linear-gradient(90deg, rgb(76, 117, 194), rgba(78, 119, 196, 0.65));
+	box-shadow: 0 0 8px #4c75c2;
+	-webkit-box-shadow: 0 0 8px #4c75c2;
+	color: #fff;
+}
 .bpBody{
 	background-color: #f7f7f7;
 	min-height: 100vh;
@@ -370,6 +382,23 @@ p.notiTxt {
 	margin-left: 260px;
 	position: relative;
 }
+.mainSec.open {
+    margin-left: 80px;
+}
 .compBody{
 	margin-top: 1.5rem;
+	padding: 1.5em 0.94em;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.1);
+	-webkit-box-shadow: 0 0 10px rgba(0,0,0,0.1);
+	background: rgb(255,255,255);
+}
+.fileUploader{
+	width: 100%;
+	display: inline-block;
+	border-bottom: 1px solid #3f51b5;
+	padding: 0.35em;
+}
+button:focus{
+	outline: none;
 }

@@ -1,11 +1,74 @@
 <section class="bpBody">
-	<app-header></app-header>
-	<section class="mainSec">
+	<app-header (headerClassChange)='updateHeaderToggle()'></app-header>
+	<section class="mainSec transition25" [ngClass]="{'open':mainContentSize}">
 		<app-navbar></app-navbar>
 		<div class="compBody">
-			<p>
-				view-emp works!
-			</p>
+			<div class="bp_tableCon">
+				<div class="row">
+					<div class="form-group col-12">
+						<mat-form-field>
+						  <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter Table">
+						</mat-form-field>
+					</div>
+				</div>
+				<table mat-table [dataSource]="dataSource">
+
+				<!-- Position Column -->
+					<ng-container matColumnDef="firstName">
+						<th mat-header-cell *matHeaderCellDef> First Name </th>
+				    	<td mat-cell *matCellDef="let element"> {{element.firstName}} </td>
+				    </ng-container>
+
+			    <!-- Name Column -->
+					<ng-container matColumnDef="lastName">
+						<th mat-header-cell *matHeaderCellDef> Last Name </th>
+						<td mat-cell *matCellDef="let element"> {{element.lastName}} </td>
+					</ng-container>
+
+			    <!-- Weight Column -->
+					<ng-container matColumnDef="phoneNo">
+			    		<th mat-header-cell *matHeaderCellDef> Phone No. </th>
+			    		<td mat-cell *matCellDef="let element"> {{element.phoneNo}} </td>
+			    	</ng-container>
+
+			    <!-- Symbol Column -->
+					<ng-container matColumnDef="email">
+						<th mat-header-cell *matHeaderCellDef> Email </th>
+						<td mat-cell *matCellDef="let element"> {{element.email}} </td>
+					</ng-container>
+					<!-- Dept Column -->
+					<ng-container matColumnDef="workDept">
+						<th mat-header-cell *matHeaderCellDef> Department </th>
+						<td mat-cell *matCellDef="let element"> {{element.workDept}} </td>
+					</ng-container>
+					<!-- Gender Column -->
+					<ng-container matColumnDef="gender">
+						<th mat-header-cell *matHeaderCellDef> Gender </th>
+						<td mat-cell *matCellDef="let element"> {{element.gender}} </td>
+					</ng-container>
+					<!-- Ed Level Column -->
+					<ng-container matColumnDef="edLevel">
+						<th mat-header-cell *matHeaderCellDef> Education </th>
+						<td mat-cell *matCellDef="let element"> {{element.edLevel}} </td>
+					</ng-container>
+					<!-- BirthDate Column -->
+					<ng-container matColumnDef="birthdate">
+						<th mat-header-cell *matHeaderCellDef> BirthDate </th>
+						<td mat-cell *matCellDef="let element"> {{element.birthdate}} </td>
+					</ng-container>
+					<!-- Action -->
+					<ng-container matColumnDef="action">
+						<th mat-header-cell *matHeaderCellDef> Action </th>
+						<td mat-cell *matCellDef="let element">
+							<button mat-icon-button color="warn" (click)="deleteEmployee(element.id)"><i class="fas fa-trash"></i></button> 
+						</td>
+					</ng-container>
+
+					<tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+					<tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+				</table>
+			  <mat-paginator [pageSizeOptions]="[10, 20, 50]" showFirstLastButtons></mat-paginator>
+			</div>
 		</div>
 	</section>
 </section>
