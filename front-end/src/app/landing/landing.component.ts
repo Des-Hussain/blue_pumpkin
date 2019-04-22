@@ -1,4 +1,8 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { ApiService } from './../api.service';
+import { CommonService } from './../common.service';
+import { NotificationsService } from 'angular2-notifications';
+import { Router } from '@angular/router'
 import * as $ from 'jquery';
 import Swiper from 'swiper';
 
@@ -9,7 +13,7 @@ import Swiper from 'swiper';
 })
 export class LandingComponent implements OnInit {
 
-	constructor() { }
+	constructor(public apiService:ApiService, public commonService:CommonService, private notificationsService:NotificationsService, public router:Router) { }
 
 	mySwiper: any;
 	public endDate = "July 22, 2019";

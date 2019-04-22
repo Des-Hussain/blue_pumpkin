@@ -9,7 +9,7 @@
 			</a>
 		</div>
 	</div>
-	<div class="sideBarListCon">
+	<div class="sideBarListCon" *ngIf="admin">
 		<div class="bpSideBar_Item">
 			<a class="bpSideBar_ItemNav" [routerLink]="['/admin-dash']" [ngClass]="{'active':router.url == '/admin-dash'}">
 				<span class="fas fa-rainbow fa-fw transition25" matTooltip="Dashboard" [matTooltipPosition]="position"></span>
@@ -46,12 +46,26 @@
 				<span class="turncate transition25">Add Employees</span>
 			</a>
 		</div>
-		<!-- <div class="bpSideBar_Item">
-			<a class="bpSideBar_ItemNav">
-				<span class="fas fa-user-cog fa-fw transition25" matTooltip="Events" [matTooltipPosition]="position"></span>
-				<span class="turncate transition25">Profile</span>
+		<div class="bpSideBar_Item">
+			<a class="bpSideBar_ItemNav" [routerLink]="['/slider']" [ngClass]="{'active':router.url == '/slider'}">
+				<span class="fab fa-slideshare fa-fw transition25" matTooltip="Events" [matTooltipPosition]="position"></span>
+				<span class="turncate transition25">Landing Slides</span>
 			</a>
-		</div> -->
+		</div>
 		<!-- Admin Menus Ends -->
+	</div>
+	<div class="sideBarListCon" *ngIf="!admin">
+		<div class="bpSideBar_Item">
+			<a class="bpSideBar_ItemNav" [routerLink]="['/edash']" [ngClass]="{'active':router.url == '/edash'}">
+				<span class="fas fa-rainbow fa-fw transition25" matTooltip="Events" [matTooltipPosition]="position"></span>
+				<span class="turncate transition25">Dashboard</span>
+			</a>
+		</div>
+		<div class="bpSideBar_Item">
+			<a class="bpSideBar_ItemNav" [routerLink]="['/slider']" [ngClass]="{'active':router.url == '/slider'}">
+				<span class="fas fa-pizza fa-fw transition25" matTooltip="Events" [matTooltipPosition]="position"></span>
+				<span class="turncate transition25">Events</span>
+			</a>
+		</div>
 	</div>
 </div>

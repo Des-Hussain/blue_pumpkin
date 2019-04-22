@@ -6,27 +6,22 @@
 			<div class="row">
 				<div class="form-group col-md-6">
 					<mat-form-field>
-						<input matInput type="text" placeholder="First Name">
+						<input matInput type="text" [(ngModel)]="employeeData.firstName" placeholder="First Name" requierd>
 					</mat-form-field>
 				</div>
 				<div class="form-group col-md-6">
 					<mat-form-field>
-						<input matInput type="text" placeholder="Last Name">
+						<input matInput type="text" [(ngModel)]="employeeData.lastName" placeholder="Last Name" requierd>
 					</mat-form-field>
 				</div>
 				<div class="form-group col-md-6">
 					<mat-form-field>
-						<input matInput type="text" OnlyNumber="true" maxlength="10" placeholder="Phone Number">
+						<input matInput type="email" [(ngModel)]="employeeData.email" placeholder="Email" requierd>
 					</mat-form-field>
 				</div>
 				<div class="form-group col-md-6">
 					<mat-form-field>
-						<input matInput type="email" placeholder="Email">
-					</mat-form-field>
-				</div>
-				<div class="form-group col-md-6">
-					<mat-form-field>
-						<mat-select placeholder="Select Department">
+						<mat-select [(ngModel)]="employeeData.empDep" placeholder="Select Department"  requierd>
 							<mat-option value="i">I.T.</mat-option>
 							<mat-option value="m">Marketing</mat-option>
 							<mat-option value="o">Others</mat-option>
@@ -35,7 +30,7 @@
 				</div>
 				<div class="form-group col-md-6">
 					<mat-form-field>
-						<mat-select placeholder="Select Education">
+						<mat-select [(ngModel)]="employeeData.education" placeholder="Select Education" requierd>
 							<mat-option value="Intermediate">Matriculation</mat-option>
 							<mat-option value="Intermediate">Intermediate</mat-option>
 							<mat-option value="Graduation">Graduation</mat-option>
@@ -47,24 +42,24 @@
 				</div>
 				<div class="form-group col-md-6">
 					<mat-form-field>
-						<input matInput [matDatepicker]="picker" placeholder="Birthdate">
+						<input matInput [(ngModel)]="employeeData.birthDate" [matDatepicker]="picker" placeholder="Birthdate" requierd>
 						<mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
 						<mat-datepicker #picker></mat-datepicker>
 					</mat-form-field>
 				</div>
 				<div class="form-group col-md-6">
 					<label for="flUpload" class="fileUploader">
-						<a mat-flat-button color="primary">Upload File</a>
+						<a mat-flat-button color="primary">Upload File <span class="text-danger">*</span></a>
 						<input id="flUpload" type="file" name="fileUpload" accept=".jpg, .png" class="d-none">
 					</label>
 				</div>
 				<div class="form-group col-md-6">
 					<mat-form-field>
-						<input matInput type="text" placeholder="Password">
+						<input matInput type="password" [(ngModel)]="employeeData.Password" placeholder="Password" required>
 					</mat-form-field>
 				</div>
-				<div class="form-group col-md-6 text-center">
-					<button mat-raised-button class="themeBtn w-75">Create Employee</button>
+				<div class="form-group col-md-12 text-center">
+					<button mat-raised-button (click)="createEmployee()" class="themeBtn w-50">Create Employee</button>
 				</div>
 			</div>
 		</div>

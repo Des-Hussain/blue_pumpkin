@@ -1,0 +1,75 @@
+<nav class="navbar navbar-expand-md navbar-light fixed-top bpMyNav" >
+	<a class="navbar-brand" href="#"><img src="assets/img/logo.png" alt="Brand"></a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bpNav" aria-controls="bpNav" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+
+	<div class="collapse navbar-collapse" id="bpNav">
+		<ul class="navbar-nav ml-auto">
+			<li class="nav-item active">
+				<a class="nav-link" [routerLink]="['/index']">Home</a>
+			</li>
+			<li class="nav-item active">
+				<a class="nav-link" [routerLink]="['/contact']">Contact Us</a>
+			</li>
+			<li class="nav-item active">
+				<a class="nav-link" [routerLink]="['/support']">Support</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+<section class="contactSec text-white">
+	<div class="conatiner m-auto text-center">
+		<h1 class="mb-5 pb-5">Contact Us <i class="fas fa-paper-plane"></i></h1>
+		<div class="row mx-0">
+			<div class="col-md-8 mx-auto">
+				<div class="formCon">
+					<div class="row">
+						<div class="col-md-6 form-group">
+							<mat-form-field>
+								<input matInput placeholder="Enter Your Name" [(ngModel)]="contactData.name">
+							</mat-form-field>
+						</div>
+						<div class="col-md-6 form-group">
+							<mat-form-field>
+								<input matInput [(ngModel)]="contactData.email" placeholder="Enter Your Email" required>
+							</mat-form-field>
+						</div>
+						<div class="col-md-12 form-group">
+							<mat-form-field>
+								<textarea matInput [(ngModel)]="contactData.message" placeholder="Your Message here..." required></textarea>
+							</mat-form-field>
+						</div>
+						<div class="col-12 text-center form-group">
+							<button mat-raised-button color="primary" (click)="sendEmail()" class="w-75 mx-auto">SUBMIT</button>
+						</div>
+						<div class="col-md-6">
+							<p class="text-left">
+								<a href="mailto:mohammadhussainmobeen@gmail.com?Subject=AmazingWebsite" target="_top" class="text-dark"><i class="fas fa-envelope-open"></i> mohammadhussainmobeen@gmail.com</a>
+							</p>
+							<p class="text-left text-dark"><i class="fas fa-phone"></i>+923151083711</p>
+						</div>
+						<div class="col-md-6"></div>
+						<div class="col-12 text-center">
+							<a mat-mini-fab class="fbBtn mr-3" (click)="redirectToUrl('https://www.facebook.com')" target="_blank">
+								<i class="fab fa-facebook-f fa-fw"></i>
+							</a>
+							<a mat-mini-fab class="twitBtn mr-3" (click)="redirectToUrl('https://www.facebook.com')">
+								<i class="fab fa-twitter fa-fw"></i>
+							</a>
+							<a mat-mini-fab class="gitBtn mr-3" (click)="redirectToUrl('https://www.github.com/maksof-hussain')">
+								<i class="fab fa-github fa-fw" ></i>
+							</a>
+							<a mat-mini-fab class="gBtn" (click)="redirectToUrl('https://www.youtube.com')">
+								<i class="fab fa-youtube fa-fw"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<footer class="text-center py-3 px-2 text-dark bg-light">
+	&copy; Copyright All right Reserved to the maksof-Hussain <i class="fab fa-github"></i>
+</footer>

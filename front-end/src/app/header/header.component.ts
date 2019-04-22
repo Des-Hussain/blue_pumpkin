@@ -17,6 +17,8 @@ export class HeaderComponent implements OnInit {
 
 	public position:String = 'right';
 	toggleSideBar:Boolean = false;
+	admin:Boolean = true;
+
 
 	ngOnInit() {
 	}

@@ -1,5 +1,9 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {MatPaginator, MatTableDataSource} from '@angular/material';
+import { ApiService } from './../api.service';
+import { CommonService } from './../common.service';
+import { NotificationsService } from 'angular2-notifications';
+import { Router } from '@angular/router'
 
 @Component({
 	selector: 'app-view-emp',
@@ -8,7 +12,8 @@ import {MatPaginator, MatTableDataSource} from '@angular/material';
 	})
 export class ViewEmpComponent implements OnInit {
 
-	constructor() { }
+	constructor( public apiService:ApiService, public commonService:CommonService, private notificationsService:NotificationsService, public router:Router) { }
+
 
 	displayedColumns: string[] = ['firstName', 'lastName', 'phoneNo', 'workDept', 'email', 'gender', 'edLevel','birthdate','action'];
 	dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);

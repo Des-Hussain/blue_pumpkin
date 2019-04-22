@@ -15,12 +15,16 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import { UserEventsComponent } from './user-events/user-events.component';
 import { UserdashboardComponent } from './userdashboard/userdashboard.component';
 import { LandingComponent } from './landing/landing.component';
-
+import { ContactComponent } from './contact/contact.component';
+import { SupportComponent } from './support/support.component';
+import { SliderComponent } from './slider/slider.component';
 
 @NgModule({
   imports: [RouterModule.forRoot([
     { path: '', redirectTo: 'index', pathMatch: 'full' },
-  	{ path: 'index', component: LandingComponent},
+    { path: 'index', component: LandingComponent},
+    { path: 'contact', component: ContactComponent},
+  	{ path: 'support', component: SupportComponent},
   	{ path: 'login', component: LoginComponent},
     // Admin Routes
   	{ path: 'admin-dash', component: AdminDashComponent},
@@ -28,12 +32,13 @@ import { LandingComponent } from './landing/landing.component';
   	{ path: 'addEvent', component: AddEventComponent},
   	{ path: 'addEmp', component: AddEmpComponent},
     { path: 'viewEmp', component: ViewEmpComponent},
+    { path: 'slider', component: SliderComponent},
   	{ path: 'event-applicaitons', component: EventAppsComponent},
     { path: 'profile', component: ProfileComponent},
     // Employee Routes
-    { path: 'userProfile', component: UserProfileComponent},
-    { path: 'user-events', component: UserEventsComponent},
-    { path: 'user-dash', component: UserdashboardComponent},
+    { path: 'eventDetails:id', component: UserProfileComponent},
+    { path: 'events', component: UserEventsComponent},
+    { path: 'edash', component: UserdashboardComponent},
   	])],
   exports: [RouterModule]
 })

@@ -9,6 +9,7 @@ import {MatAutocompleteModule, MatBadgeModule, MatBottomSheetModule, MatButtonMo
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { SimpleNotificationsModule } from 'angular2-notifications';
 import { MatFormFieldModule} from '@angular/material';
+import { ScrollToModule } from 'ng2-scroll-to-el';
 
 
 // Directives
@@ -38,6 +39,9 @@ import { LandingComponent } from './landing/landing.component';
 import { UserdashboardComponent } from './userdashboard/userdashboard.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { EventAppsComponent } from './event-apps/event-apps.component';
+import { ContactComponent } from './contact/contact.component';
+import { SupportComponent } from './support/support.component';
+import { SliderComponent } from './slider/slider.component';
 
 @NgModule({
 	declarations: [
@@ -60,7 +64,10 @@ import { EventAppsComponent } from './event-apps/event-apps.component';
 	LandingComponent,
 	UserdashboardComponent,
 	NavbarComponent,
-	EventAppsComponent
+	EventAppsComponent,
+	ContactComponent,
+	SupportComponent,
+	SliderComponent
 	],
 	imports: [
 	HttpClientModule,
@@ -83,6 +90,7 @@ import { EventAppsComponent } from './event-apps/event-apps.component';
 	MatButtonToggleModule,
 	MatGridListModule, 
 	MatCardModule, 
+	ScrollToModule,
 	MatChipsModule,
 	MatRadioModule,
 	FormsModule,

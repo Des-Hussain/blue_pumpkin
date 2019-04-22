@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from './../api.service';
+import { CommonService } from './../common.service';
+import { NotificationsService } from 'angular2-notifications';
+import { Router } from '@angular/router'
 
 @Component({
 	selector: 'app-add-event',
@@ -7,8 +11,9 @@ import { Component, OnInit } from '@angular/core';
 	})
 export class AddEventComponent implements OnInit {
 
-	constructor() { }
+	constructor( public apiService:ApiService, public commonService:CommonService, private notificationsService:NotificationsService, public router:Router) { }
 
+	eventData:any = {};
 	mainContentSize:Boolean = false;
 	
 	ngOnInit() {
@@ -16,5 +21,15 @@ export class AddEventComponent implements OnInit {
 
 	updateHeaderToggle(){
 		this.mainContentSize = !this.mainContentSize;
+	}
+
+	createEvent(){
+		if (this.commonService.required(this.eventData.title) && this.commonService.required(this.eventData.subTitle) && this.commonService.required(this.eventData.desc) && this.commonService.required(this.eventData.date)) {
+			this.apiService.createEvent(this.eventData).subscribe(res=>{
+				this.notificationsService.success("Success","Event Created Successfully");
+			},(error)=>{
+				this.notificationsService.error("Error!","Internal Server Error");
+			});
+		}else this.notificationsService.error('Error!',"Please Fill all the required fields (*).");
 	}
 }

@@ -1,0 +1,64 @@
+<nav class="navbar navbar-expand-md navbar-light fixed-top bpMyNav" >
+	<a class="navbar-brand" href="#"><img src="assets/img/logo.png" alt="Brand"></a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bpNav" aria-controls="bpNav" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+
+	<div class="collapse navbar-collapse" id="bpNav">
+		<ul class="navbar-nav ml-auto">
+			<li class="nav-item active">
+				<a class="nav-link" [routerLink]="['/index']">Home</a>
+			</li>
+			<li class="nav-item active">
+				<a class="nav-link" [routerLink]="['/contact']">Contact Us</a>
+			</li>
+			<li class="nav-item active">
+				<a class="nav-link" [routerLink]="['/support']">Support</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+<section class="topSupSec text-center">
+	<div class="container my-auto">
+		<h1 class="mb-5">Blue Pumpkin Support</h1>
+		<h6 class="mb-4">What can we help you with?</h6>
+		<div class="row">
+			<div class="col-md-8 mx-auto searchCon">
+				<input class="form-control py-4" placeholder="Search support for keyword, error codes etc."><i class="fas fa-search"></i>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="articlesSection">
+	<div class="container my-auto">
+		<div class="row">
+			<div class="col-md-3 form-group">
+				<div class="artCon">
+					<i class="fas fa-user-lock d-block mb-3 fa-fw mx-auto fa-3x text-primary"></i>
+					<a class="btn btn-link" href="#" target="_blank">Login Problems</a>
+				</div>
+			</div>
+			<div class="col-md-3 form-group">
+				<div class="artCon">
+					<i class="fas fa-pizza-slice d-block mb-3 fa-fw mx-auto fa-3x text-warning"></i>
+					<a class="btn btn-link" href="#" target="_blank">Latest Event</a>
+				</div>
+			</div>
+			<div class="col-md-3 form-group">
+				<div class="artCon">
+					<i class="fab fa-wpforms d-block mb-3 fa-fw mx-auto fa-3x text-success"></i>
+					<a class="btn btn-link" href="#" target="_blank">Applying Problems</a>
+				</div>
+			</div>
+			<div class="col-md-3 form-group">
+				<div class="artCon">
+					<i class="fas fa-phone d-block mb-3 fa-fw mx-auto fa-3x text-info"></i>
+					<a class="btn btn-link" [routerLink]="['/contact']" target="_blank">Contact Us</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<footer class="text-center py-3 px-2 text-dark bg-light">
+	&copy; Copyright All right Reserved to the maksof-Hussain <i class="fab fa-github"></i>
+</footer>

@@ -5,11 +5,11 @@ import { NotificationsService } from 'angular2-notifications';
 import { Router } from '@angular/router'
 
 @Component({
-	selector: 'app-profile',
-	templateUrl: './profile.component.html',
-	styleUrls: ['./profile.component.css']
+	selector: 'app-slider',
+	templateUrl: './slider.component.html',
+	styleUrls: ['./slider.component.css']
 })
-export class ProfileComponent implements OnInit {
+export class SliderComponent implements OnInit {
 
 	constructor( public apiService:ApiService, public commonService:CommonService, private notificationsService:NotificationsService, public router:Router) { }
 

@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-light fixed-top bpMyNav">
+<nav class="navbar navbar-expand-md navbar-light fixed-top bpMyNav" >
 	<a class="navbar-brand" href="#"><img src="assets/img/logo.png" alt="Brand"></a>
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bpNav" aria-controls="bpNav" aria-expanded="false" aria-label="Toggle navigation">
 		<span class="navbar-toggler-icon"></span>
@@ -7,21 +7,27 @@
 	<div class="collapse navbar-collapse" id="bpNav">
 		<ul class="navbar-nav ml-auto">
 			<li class="nav-item active">
-				<a class="nav-link" href="#">Home</a>
+				<a class="nav-link" [scrollTo]="top" [scrollDuration]="1000" [scrollOffset]="-100">Home</a>
 			</li>
 			<li class="nav-item active">
-				<a class="nav-link" href="#">Events</a>
+				<a class="nav-link" [scrollTo]="events" [scrollDuration]="1000">Events</a>
 			</li>
 			<li class="nav-item active">
-				<a class="nav-link" href="#">Winners</a>
+				<a class="nav-link"  [scrollTo]="winners" [scrollDuration]="1000">Winners</a>
 			</li>
 			<li class="nav-item active">
-				<a class="nav-link" href="#">Contact Us</a>
+				<a class="nav-link" [scrollTo]="faq" [scrollDuration]="1000">FAQ</a>
+			</li>
+			<li class="nav-item active">
+				<a class="nav-link" [routerLink]="['/contact']">Contact Us</a>
+			</li>
+			<li class="nav-item active">
+				<a class="nav-link" [routerLink]="['/support']">Support</a>
 			</li>
 		</ul>
 	</div>
 </nav>
-<section class="SliderSection">
+<section class="SliderSection" #top>
 	<!-- Swiper -->
 	<div class="swiper-container">
 		<div class="swiper-wrapper">
@@ -69,7 +75,7 @@
 		</div>
 	</div>
 </section>
-<section class="eventsCon">
+<section class="eventsCon" #events>
 	<h1 class="mb-3 pb-5 text-center">Up Coming Events!</h1>
 	<div class="container  text-left">
 		<div class="row">
@@ -116,7 +122,7 @@
 		</div>
 	</div>
 </section>
-<section class="winnerSection text-center">
+<section class="winnerSection text-center" #winners>
 	<h1 class="pb-5 mb-3">Last Event Winners <sup><i class="fas fa-crown"></i></sup></h1>
 	<div class="container">
 		<div class="row">
@@ -145,6 +151,64 @@
 					</div>
 					<h3>3rd</h3>
 					<h5><a class="text-primary">ariandan@mail.com</a></h5>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="faqSection text-center" #faq>
+	<h1 class="pb-5 mb-3" title="Frequently Asked Questions">FAQ</h1>
+	<div class="row">
+		<div class="col-md-8 mx-auto">
+			<div id="accordion">
+				<div class="card">
+					<div class="card-header" id="headingOne">
+						<h5 class="mb-0" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+								How to participate in the events?
+						</h5>
+					</div>
+
+					<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+						<div class="card-body">
+							Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch.
+						</div>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card-header" id="headingTwo">
+						<h5 class="mb-0 collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+								What if I am unable to login into the site?
+						</h5>
+					</div>
+					<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+						<div class="card-body">
+							Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.
+						</div>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card-header" id="headingThree">
+						<h5 class="collapsed mb-0" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+								What if I am unable to send the participation request for the event?
+						</h5>
+					</div>
+					<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+						<div class="card-body">
+							Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch.
+						</div>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card-header" id="headingFour">
+						<h5 class="collapsed mb-0" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+								How can one be intimated with the upcoming events?
+						</h5>
+					</div>
+					<div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+						<div class="card-body">
+							Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch.
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

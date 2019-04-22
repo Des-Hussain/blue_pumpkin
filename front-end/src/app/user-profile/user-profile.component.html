@@ -1,3 +1,9 @@
-<p>
-  user-profile works!
-</p>
+<section class="bpBody">
+	<app-header (headerClassChange)='updateHeaderToggle()'></app-header>
+	<section class="mainSec transition25" [ngClass]="{'open':mainContentSize}">
+		<app-navbar></app-navbar>
+		<div class="compBody">
+			<p>USERS PROFILE</p>
+		</div>
+	</section>
+</section>

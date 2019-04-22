@@ -1,6 +1,6 @@
 <section class="bpBody">
-	<app-header></app-header>
-	<section class="mainSec">
+	<app-header (headerClassChange)='updateHeaderToggle()'></app-header>
+	<section class="mainSec transition25" [ngClass]="{'open':mainContentSize}">
 		<app-navbar></app-navbar>
 		<div class="compBody">
 			<p>
